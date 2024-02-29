@@ -1,0 +1,43 @@
+{
+    "name": "@plenny/vite-lib-entries-scanner",
+    "description": "A simple utility to scan packages entries automatically in vite library mode.",
+    "keywords": ["plenny", "vite", "dependency", "external"],
+    "version": "0.1.0",
+    "license": "MIT",
+    "homepage": "https://github.com/rafalkrawiec/vite-lib-entries-scanner",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rafalkrawiec/vite-lib-entries-scanner.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rafalkrawiec/vite-lib-entries-scanner/issues",
+        "email": "rafal.krawiec16@gmail.com"
+    },
+    "author": {
+        "name": "Rafał Krawiec",
+        "email": "rafal.krawiec16@gmail.com"
+    },
+    "type": "module",
+    "module": "dist/scanner.js",
+    "main": "dist/scanner.cjs",
+    "types": "dist/scanner.d.ts",
+    "files": ["dist"],
+    "exports": {
+        ".": {
+            "types": "./dist/scanner.d.ts",
+            "import": "./dist/scanner.js",
+            "require": "./dist/scanner.cjs"
+        }
+    },
+    "scripts": {
+        "dev": "vite build -m development --watch",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "terser": "^5.26.0",
+        "typescript": "^5.0.0",
+        "vite": "^5.0.0",
+        "vite-plugin-dts": "^3.6.0"
+    }
+}
