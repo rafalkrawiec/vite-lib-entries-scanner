@@ -2,7 +2,7 @@
     "name": "@plenny/vite-lib-entries-scanner",
     "description": "A simple utility to scan packages entries automatically in vite library mode.",
     "keywords": ["plenny", "vite", "dependency", "external"],
-    "version": "0.1.0",
+    "version": "0.1.2",
     "license": "MIT",
     "homepage": "https://github.com/rafalkrawiec/vite-lib-entries-scanner",
     "repository": {

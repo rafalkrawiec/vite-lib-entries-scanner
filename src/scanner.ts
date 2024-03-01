@@ -16,9 +16,10 @@ function scanDirectory(original: string, directory: string, extensions: string[]
       result = scanDirectory(original, filePath, extensions, result);
     } else {
       if (extensions.includes(path.extname(file))) {
+        let regexp = path.sep === '/' ? /^\// : /^\\/;
         let entry = path.normalize(filePath)
           .replace(new RegExp(`^${original}`), '')
-          .replace(/^\//, '')
+          .replace(regexp, '')
           .replace(path.extname(file), '');
 
         result.push([entry, filePath]);
